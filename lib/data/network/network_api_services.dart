@@ -22,7 +22,10 @@ class NetworkApiService extends BaseApiServices {
     } on SocketException {
       throw InternetException('');
     } on TimeoutException {
-      throw TimeoutException('');
+      throw RequestTimeOut('');
+    }
+    if (kDebugMode) {
+      print(responseJson);
     }
 
     return responseJson;

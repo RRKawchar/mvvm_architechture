@@ -8,11 +8,11 @@ class UserListModel {
 
   UserListModel(
       {this.page,
-        this.perPage,
-        this.total,
-        this.totalPages,
-        this.data,
-        this.support});
+      this.perPage,
+      this.total,
+      this.totalPages,
+      this.data,
+      this.support});
 
   UserListModel.fromJson(Map<String, dynamic> json) {
     page = json['page'];
@@ -26,7 +26,7 @@ class UserListModel {
       });
     }
     support =
-    json['support'] != null ? Support.fromJson(json['support']) : null;
+        json['support'] != null ? Support.fromJson(json['support']) : null;
   }
 
   Map<String, dynamic> toJson() {

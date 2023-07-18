@@ -4,13 +4,12 @@ import 'package:mvvm_getx/res/colors/app_colors.dart';
 import 'package:mvvm_getx/res/fonts/app_fonts.dart';
 
 class GeneralExceptionWidget extends StatefulWidget {
-
   final VoidCallback onPressed;
-  const GeneralExceptionWidget({Key? key, required this.onPressed}) : super(key: key);
+  const GeneralExceptionWidget({Key? key, required this.onPressed})
+      : super(key: key);
 
   @override
-  State<GeneralExceptionWidget> createState() =>
-      _GeneralExceptionWidgetState();
+  State<GeneralExceptionWidget> createState() => _GeneralExceptionWidgetState();
 }
 
 class _GeneralExceptionWidgetState extends State<GeneralExceptionWidget> {
@@ -33,9 +32,9 @@ class _GeneralExceptionWidgetState extends State<GeneralExceptionWidget> {
             padding: const EdgeInsets.only(top: 30),
             child: Center(
                 child: Text(
-                  'general_exception'.tr,
-                  textAlign: TextAlign.center,
-                )),
+              'general_exception'.tr,
+              textAlign: TextAlign.center,
+            )),
           ),
           SizedBox(
             height: size.height * .15,
@@ -47,16 +46,15 @@ class _GeneralExceptionWidgetState extends State<GeneralExceptionWidget> {
               width: 160,
               decoration: BoxDecoration(
                   color: AppColor.primaryColor,
-                  borderRadius: BorderRadius.circular(50)
-              ),
+                  borderRadius: BorderRadius.circular(50)),
               child: Center(
                   child: Text(
-                    "Retry",
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: AppColor.whiteColor,
-                        fontFamily: AppFonts.roboto_thin,
-                        fontWeight: FontWeight.bold),
-                  )),
+                "Retry",
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    color: AppColor.whiteColor,
+                    fontFamily: AppFonts.roboto_thin,
+                    fontWeight: FontWeight.bold),
+              )),
             ),
           )
         ],
